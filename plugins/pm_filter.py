@@ -986,7 +986,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         cap = f"<b>➥𝚁𝚎𝚚𝚞𝚎𝚜𝚝𝚎𝚍 𝙱𝚢: {message.from_user.mention},\n➥𝙼𝚘𝚟𝚒𝚎𝚜/𝚂𝚎𝚛𝚒𝚎𝚜: {search}...</b>"
     CAP[key] = cap
-    del_msg = f"\n\n<b>➥𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝙳𝚎𝚕𝚎𝚝𝚎 𝙸𝚗 <code>{get_readable_time(DELETE_TIME)}</code>🕑</b>" if settings["auto_delete"] else ''
+    del_msg = f"\n\n<b>➥𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝙳𝚎𝚕𝚎𝚝𝚎 𝙸𝚗 <code>{get_readable_time(DELETE_TIME)}</code>🕑</b>" if settings["auto_delete"] else "
     if imdb and imdb.get('poster'):
         try:
             if settings["auto_delete"]:
