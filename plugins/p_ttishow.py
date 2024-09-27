@@ -15,8 +15,10 @@ async def welcome(bot, message):
     if message.new_chat_member and not message.old_chat_member:
         if message.new_chat_member.user.id == temp.ME:
             buttons = [[
-                InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇ', url=UPDATES_LINK),
-                InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ', url=SUPPORT_LINK)
+                InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+                InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+            ],[
+                InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             user = message.from_user.mention if message.from_user else "Dear"
@@ -56,8 +58,11 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
-        ]]
+                InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+                InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+            ],[
+                InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
+            ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
@@ -94,8 +99,11 @@ async def disable_chat(bot, message):
     await message.reply('Chat successfully disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('Support Group', url=SUPPORT_LINK)
-        ]]
+                InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+                InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+            ],[
+                InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
+            ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat_, 
