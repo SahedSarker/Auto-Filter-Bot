@@ -163,15 +163,19 @@ async def start(client, message):
                 btn = [[
                     InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f"stream#{file.file_id}")
                 ],[
-                    InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ⚡️', url=UPDATES_LINK),
-                    InlineKeyboardButton('💡 ꜱᴜᴘᴘᴏʀᴛ 💡', url=SUPPORT_LINK)
+                    InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+                    InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+                ],[
+                    InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
                 ],[
                     InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')
                 ]]
             else:
                 btn = [[
-                    InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ⚡️', url=UPDATES_LINK),
-                    InlineKeyboardButton('💡 ꜱᴜᴘᴘᴏʀᴛ 💡', url=SUPPORT_LINK)
+                    InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+                    InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+                ],[
+                    InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
                 ],[
                     InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')
                 ]]
