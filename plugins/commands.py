@@ -219,15 +219,19 @@ async def start(client, message):
         btn = [[
             InlineKeyboardButton("✛ ᴡᴀᴛᴄʜ & ᴅᴏᴡɴʟᴏᴀᴅ ✛", callback_data=f"stream#{file_id}")
         ],[
-            InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ⚡️', url=UPDATES_LINK),
-            InlineKeyboardButton('💡 ꜱᴜᴘᴘᴏʀᴛ 💡', url=SUPPORT_LINK)
+            InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+            InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+        ],[
+            InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
         ],[
             InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')
         ]]
     else:
         btn = [[
-            InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ⚡️', url=UPDATES_LINK),
-            InlineKeyboardButton('💡 ꜱᴜᴘᴘᴏʀᴛ 💡', url=SUPPORT_LINK)
+            InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+            InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+        ],[
+            InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
         ],[
             InlineKeyboardButton('⁉️ ᴄʟᴏsᴇ ⁉️', callback_data='close_data')
         ]]
@@ -566,7 +570,7 @@ async def remove_premium_cmd_handler(client, message):
             await message.reply_text("Premium access removed to the user.")
             await client.send_message(
                 chat_id=user_id,
-                text=f"<b>premium removed by admins \n\n Contact Admin if this is mistake \n\n 👮 Admin : @Rk_botowner \n</b>",                
+                text=f"<b>premium removed by admins \n\n Contact Admin if this is mistake \n\n 👮 Admin : @sahedsarker \n</b>",                
             )
         else:
             await message.reply_text("Invalid time format.'")
@@ -576,7 +580,7 @@ async def remove_premium_cmd_handler(client, message):
 @Client.on_message(filters.command("plans"))
 async def plans_cmd_handler(client, message):                
     btn = [            
-        [InlineKeyboardButton("ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ʀᴇᴄᴇɪᴘᴛ 🧾", url="t.me/Rk_botowner")],
+        [InlineKeyboardButton("ꜱᴇɴᴅ ᴘᴀʏᴍᴇɴᴛ ʀᴇᴄᴇɪᴘᴛ 🧾", url="t.me/sahedsarker")],
         [InlineKeyboardButton("⚠️ ᴄʟᴏsᴇ / ᴅᴇʟᴇᴛᴇ ⚠️", callback_data="close_data")]
     ]
     reply_markup = InlineKeyboardMarkup(btn)
