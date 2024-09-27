@@ -22,7 +22,7 @@ async def welcome(bot, message):
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             user = message.from_user.mention if message.from_user else "Dear"
-            await bot.send_photo(chat_id=message.chat.id, photo=random.choice(PICS), caption=f"👋 Hello {user},\n\nThank you for adding me to the <b>'{message.chat.title}'</b> group, Don't forget to make me admin. If you want to know more ask the support group. 😘</b>", reply_markup=reply_markup)
+            await bot.send_photo(chat_id=message.chat.id, photo=random.choice(PICS), caption=f"➥ Hello {user},\n\nThank you for adding me to the <b>'{message.chat.title}'</b> group, Don't forget to make me admin. If you want to know more Contact My Owner. 😘</b>", reply_markup=reply_markup)
             return
         settings = await get_settings(message.chat.id)
         if settings["welcome"]:
@@ -66,7 +66,7 @@ async def leave_a_chat(bot, message):
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text=f'Hello Friends,\nMy owner has told me to leave from group so i go! If you need add me again contact my support group.\nReason - <code>{reason}</code>',
+            text=f'Hello Friends,\n➥My owner has told me to leave from group so i go! If you need add me again contact my Bot Owner.\nReason - <code>{reason}</code>',
             reply_markup=reply_markup,
         )
         await bot.leave_chat(chat)
@@ -107,7 +107,7 @@ async def disable_chat(bot, message):
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat_, 
-            text=f'Hello Friends,\nMy owner has told me to leave from group so i go! If you need add me again contact my support group.\nReason - <code>{reason}</code>',
+            text=f'Hello Friends,\n➥My owner has told me to leave from group so i go! If you need add me again contact my Bot Owner.\nReason - <code>{reason}</code>',
             reply_markup=reply_markup)
         await bot.leave_chat(chat_)
     except Exception as e:
