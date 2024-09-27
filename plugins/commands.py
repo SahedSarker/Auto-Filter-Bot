@@ -33,12 +33,19 @@ async def aiRes(_, message):
             await message.reply("Mausam kharab hai ! Thode der mein try kre !\nor Report to Developer.")
     else:
         btn = [[
-            InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
+            InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+            InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+        ],[
+            InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
         ]]
         await message.reply(f"<b>hey {message.from_user.mention},\n\nPlease use this command in support group.</b>", reply_markup=InlineKeyboardMarkup(btn))
         
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
+    try:
+        await message.react(emoji="🆒", big=True)
+    except:
+        pass
     botid = client.me.id
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         if not await db.get_chat(message.chat.id):
@@ -48,8 +55,10 @@ async def start(client, message):
             await db.add_chat(message.chat.id, message.chat.title)
         wish = get_wish()
         btn = [[
-            InlineKeyboardButton('⚡️ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ⚡️', url=UPDATES_LINK),
-            InlineKeyboardButton('💡 Support Group 💡', url=SUPPORT_LINK)
+            InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+            InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+        ],[
+            InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
         ]]
         await message.reply(text=f"<b>ʜᴇʏ {message.from_user.mention}, <i>{wish}</i>\nʜᴏᴡ ᴄᴀɴ ɪ ʜᴇʟᴘ ʏᴏᴜ??</b>", reply_markup=InlineKeyboardMarkup(btn))
         return 
