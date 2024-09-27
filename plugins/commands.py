@@ -140,7 +140,7 @@ async def start(client, message):
             reply_markup = InlineKeyboardMarkup(btn)
             await message.reply_photo(
                 photo=random.choice(PICS),
-                caption=f"👋 Hello {message.from_user.mention},\n\nPlease join my 'Updates Channel' and try again. 😇",
+                caption=f"➥ Hello {message.from_user.mention},\n\n➥ Please join my 'Updates Channel' and try again 😊\n\n➥ নিচের চ্যানেলে জয়েন করে, ট্রাই এগেইন বাটনে ক্লিক করার সাথে সাথে মুভি ফাইল চলে আসবে 😊",
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             )
