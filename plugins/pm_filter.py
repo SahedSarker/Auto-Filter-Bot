@@ -25,8 +25,8 @@ async def aks_downloader(bot, query):
     watch = f"{URL}watch/{msg.id}"
     download = f"{URL}download/{msg.id}"
     btn= [[
-        InlineKeyboardButton("ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ", url=watch),
-        InlineKeyboardButton("ꜰᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ", url=download)
+        InlineKeyboardButton("📺ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ📺", url=watch),
+        InlineKeyboardButton("📥ꜰᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ📥", url=download)
     ],[
         InlineKeyboardButton('❌ ᴄʟᴏsᴇ ❌', callback_data='close_data')
     ]]
@@ -44,14 +44,14 @@ async def give_filter(client, message):
         btn = await is_subscribed(client, message, settings['fsub']) if settings.get('is_fsub', IS_FSUB) else None
         if btn:
             btn.append(
-                [InlineKeyboardButton("Unmute Me 🔕", callback_data=f"unmuteme#{chatid}")]
+                [InlineKeyboardButton("🔕 Unmute Me 🔕", callback_data=f"unmuteme#{chatid}")]
             )
             reply_markup = InlineKeyboardMarkup(btn)
             try:
                 await client.restrict_chat_member(chatid, message.from_user.id, ChatPermissions(can_send_messages=False))
                 await message.reply_photo(
                     photo=random.choice(PICS),
-                    caption=f"👋 Hello {message.from_user.mention},\n\nPlease join and try again. 😇",
+                    caption=f"➥Hello {message.from_user.mention},\n\n➥Please join and try again. 😇\n\n➥নিচের চ্যানেলে জয়েন করুন\n➥আন মিউট মি বাটনে তে ক্লিক করলে\n\n➥আবার মেসেজ করতে পারবেন গ্রুপে 😇",
                     reply_markup=reply_markup,
                     parse_mode=enums.ParseMode.HTML
                 )
