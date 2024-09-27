@@ -540,16 +540,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         await query.answer('Welcome!')
         buttons = [[
-            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
-        ],[
-            InlineKeyboardButton('🌿 ꜱᴜᴘᴘᴏʀᴛ', callback_data="my_about"),
-            InlineKeyboardButton('👤 ᴏᴡɴᴇʀ', callback_data='my_owner')
-        ],[
-            InlineKeyboardButton('🍁 ғᴇᴀᴛᴜʀᴇs', callback_data='help'),
-            InlineKeyboardButton('🔐 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
-        ],[
-            InlineKeyboardButton('💰 ᴇᴀʀɴ ᴍᴏɴᴇʏ ʙʏ ʙᴏᴛ 💰', callback_data='earn')
-        ]]
+                    InlineKeyboardButton('⍟ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⍟', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                ],[
+                    InlineKeyboardButton('【 ᴄʜᴀɴɴᴇʟ 】', url="http://t.me/movie344/4"),
+                    InlineKeyboardButton('【 ɢʀᴏᴜᴘ 】', url="http://t.me/sahedmovieswrlD")
+                ],[
+                    InlineKeyboardButton('【 ᴄᴏᴍᴍᴀɴᴅꜱ 】', callback_data='help'),
+                    InlineKeyboardButton('【 ᴘʀᴇᴍɪᴜᴍ 】', callback_data='buy_premium')
+                ],[
+                    InlineKeyboardButton('【 ᴀʙᴏᴜᴛ 】', callback_data="my_about"),
+                    InlineKeyboardButton('【 ᴏᴡɴᴇʀ 】', callback_data='my_owner')
+                ],[
+                    InlineKeyboardButton('【 ᴇᴀʀɴ ᴍᴏɴᴇʏ ʙʏ ʙᴏᴛ 】', callback_data='earn')
+                ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, get_wish()),
@@ -559,8 +562,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "my_about":
         buttons = [[
-            InlineKeyboardButton('📊 sᴛᴀᴛᴜs', callback_data='stats'),
-            InlineKeyboardButton('🔋 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', callback_data='source')
+            InlineKeyboardButton('📊 sᴛᴀᴛᴜs 📊', callback_data='stats'),
+            InlineKeyboardButton('🔋 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ 🔋', callback_data='source')
+        ],[
+            InlineKeyboardButton('💀 𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 💀', url="https://t.me/sahedsarker")
         ],[
             InlineKeyboardButton('« ʙᴀᴄᴋ', callback_data='start')
         ]]
@@ -916,13 +921,13 @@ async def auto_filter(client, msg, spoll=False):
     if offset != "":
         if settings['shortlink']:
             btn.insert(0,
-                [InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ ♻️", url=await get_shortlink(settings['url'], settings['api'], f'https://t.me/{temp.U_NAME}?start=all_{message.chat.id}_{key}')),
-                InlineKeyboardButton("📰 ʟᴀɴɢᴜᴀɢᴇs 📰", callback_data=f"languages#{key}#{req}#0")]
+                [InlineKeyboardButton("【 ꜱᴇɴᴅ ᴀʟʟ 】", url=await get_shortlink(settings['url'], settings['api'], f'https://t.me/{temp.U_NAME}?start=all_{message.chat.id}_{key}')),
+                InlineKeyboardButton("【 ʟᴀɴɢᴜᴀɢᴇ 】", callback_data=f"languages#{key}#{req}#0")]
             )
         else:
             btn.insert(0,
-                [InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ ♻️", callback_data=f"send_all#{key}"),
-                 InlineKeyboardButton("📰 ʟᴀɴɢᴜᴀɢᴇs 📰", callback_data=f"languages#{key}#{req}#0")]
+                [InlineKeyboardButton("【 ꜱᴇɴᴅ ᴀʟʟ 】", callback_data=f"send_all#{key}"),
+                 InlineKeyboardButton("【 ʟᴀɴɢᴜᴀɢᴇ 】", callback_data=f"languages#{key}#{req}#0")]
             )
 
         btn.append(
@@ -932,11 +937,11 @@ async def auto_filter(client, msg, spoll=False):
     else:
         if settings['shortlink']:
             btn.insert(0,
-                [InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ ♻️", url=await get_shortlink(settings['url'], settings['api'], f'https://t.me/{temp.U_NAME}?start=all_{message.chat.id}_{key}'))]
+                [InlineKeyboardButton("【 ꜱᴇɴᴅ ᴀʟʟ 】", url=await get_shortlink(settings['url'], settings['api'], f'https://t.me/{temp.U_NAME}?start=all_{message.chat.id}_{key}'))]
             )
         else:
             btn.insert(0,
-                [InlineKeyboardButton("♻️ sᴇɴᴅ ᴀʟʟ ♻️", callback_data=f"send_all#{key}")]
+                [InlineKeyboardButton("【 ꜱᴇɴᴅ ᴀʟʟ 】", callback_data=f"send_all#{key}")]
             )
         btn.append(
             [InlineKeyboardButton(text="🚸 ɴᴏ ᴍᴏʀᴇ ᴘᴀɢᴇs 🚸", callback_data="buttons")]
@@ -979,9 +984,9 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>💭 ʜᴇʏ {message.from_user.mention},\n♻️ ʜᴇʀᴇ ɪ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ sᴇᴀʀᴄʜ {search}...</b>"
+        cap = f"<b>➥𝚁𝚎𝚚𝚞𝚎𝚜𝚝𝚎𝚍 𝙱𝚢: {message.from_user.mention},\n➥𝙼𝚘𝚟𝚒𝚎𝚜/𝚂𝚎𝚛𝚒𝚎𝚜: {search}...</b>"
     CAP[key] = cap
-    del_msg = f"\n\n<b>⚠️ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀꜰᴛᴇʀ <code>{get_readable_time(DELETE_TIME)}</code> ᴛᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs</b>" if settings["auto_delete"] else ''
+    del_msg = f"\n\n<b>➥𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝙳𝚎𝚕𝚎𝚝𝚎 𝙸𝚗 <code>{get_readable_time(DELETE_TIME)}</code>🕑</b>" if settings["auto_delete"] else ''
     if imdb and imdb.get('poster'):
         try:
             if settings["auto_delete"]:
@@ -1076,7 +1081,7 @@ async def advantage_spell_chok(message):
     buttons.append(
         [InlineKeyboardButton("🚫 ᴄʟᴏsᴇ 🚫", callback_data="close_data")]
     )
-    s = await message.reply_photo(photo=random.choice(PICS), caption=f"👋 Hello {message.from_user.mention},\n\nI couldn't find the <b>'{search}'</b> you requested.\nSelect if you meant one of these? 👇", reply_markup=InlineKeyboardMarkup(buttons), reply_to_message_id=message.id)
+    s = await message.reply_photo(photo=random.choice(PICS), caption=f"➥ Hello {message.from_user.mention},\n\n➥I couldn't find the <b>'{search}'</b> you requested.\n➥Select if you meant one of these? 👇", reply_markup=InlineKeyboardMarkup(buttons), reply_to_message_id=message.id)
     await asyncio.sleep(300)
     await s.delete()
     try:
